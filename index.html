@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Drum Kit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="images/drum-icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+</head>
+
+<body>
+  <header class="v-header container">
+    <div class="fullscreen-video-wrap">
+      <video muted autoplay loop>
+        <source src="images/drums.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <h1 id="title">Virtual Drum Kit</h1>
+      <p>Play music online with this Virtual Drums simulation. The drum kit includes: high tom, mid tom, floor tom, snare drum, open hi-hat, crash and bass drum. </p>
+      <a href="#play" class="btn">PLAY</a>
+    </div>
+  </header>
+
+
+  <div class="set" id="play">
+    <p>You can play by clicking on buttons or using your keyboard: W, A, S, D, J, K, L.</p>
+    <hr>
+    <div class="drums-image">
+      <img src="images/drums.png" alt="drums">
+
+      <div class="keys">
+        <div data-key='65' class='key__button w drum'>w</div>
+        <div data-key='65' class='key__button a drum'>a</div>
+        <div data-key='65' class='key__button s drum'>s</div>
+        <div data-key='65' class='key__button d drum'>d</div>
+        <div data-key='65' class='key__button j drum'>j</div>
+        <div data-key='65' class='key__button k drum'>k</div>
+        <div data-key='65' class='key__button l drum'>l</div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  <script src="index.js" charset="utf-8"></script>
+
+</body>
+
+<footer>
+  © Copyright 2020 Ania Jaworska
+</footer>
+
+</html>

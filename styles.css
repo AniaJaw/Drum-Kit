@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  background-color: #283149;
+  overflow-x: hidden;
+}
+
+hr {
+  border-style: none;
+  border-top-style: solid;
+  border-color: #888;
+  border-width: 2px;
+  width: 15rem;
+  margin-bottom: 50px;
+}
+
+footer {
+  color: #DBEDF3;
+  font-family: "Arvo", cursive;
+  padding: 24px 0;
+}
+
+/* COVER VIDEO */
+
+.v-header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.container {
+  max-width: 960px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  text-align: center;
+}
+
+.fullscreen-video-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fullscreen-video-wrap video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.header-overlay {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #283149;
+  z-index: 1;
+  opacity: .8;
+}
+
+.header-content {
+  z-index: 2;
+}
+
+.header-content h1 {
+  font-size: 5rem;
+  color: #DBEDF3;
+  font-family: "Arvo", cursive;
+  text-shadow: 3px 0 #DA0463;
+}
+
+.header-content p {
+  font-size: 1.5rem;
+  display: block;
+  padding-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  font-family: "Arvo", cursive;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: .3em;
+  text-decoration: none;
+  color: rgba(92, 136, 255, 1);
+  background-color: transparent;
+  border: 1px solid rgba(92, 136, 255, 1);
+  border-radius: 100px;
+  padding: .3em 1.2em .3em 1.5em;
+  margin: 5%;
+  background-size: 200% 100%;
+  background-image: linear-gradient(to right, transparent 50%, rgba(68, 96, 171, 1) 50%);
+  transition: background-position .4s cubic-bezier(0.19, 1, 0.22, 1) .15s, color .8s ease 0s, background-color 1s ease;
+}
+
+.btn:hover {
+	color:rgba(255, 255, 255, 1);
+	background-color:rgba(62, 75, 112, 1);
+	background-position: -100% 100%;
+}
+
+/* DRUMS */
+
+.set {
+  margin: auto;
+  padding: 3% 15% 10%;
+  background-color: #ececec;
+  user-select: none;
+}
+
+.set p {
+  font-size: 1.4rem;
+  color: grey;
+  user-select: text;
+}
+
+.drums-image {
+  position: relative;
+  display: inline-block;
+}
+
+.drums-image img {
+  max-width: 500px;
+  width: 100%;
+}
+
+/* KEY BUTTONS */
+
+.keys {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: .7;
+  text-transform: uppercase;
+}
+
+
+.key__button {
+  position: absolute;
+  box-sizing: border-box;
+  line-height: 50px;
+  font-size: 22px;
+  text-align: center;
+  width: 50px;
+  color: #555;
+  cursor: -webkit-image-set(url(images/pointer_2936.png) 3x), default;
+  margin: 0 8px;
+  height: 50px;
+  border-color: #f2f2f2;
+  border-style: solid;
+  text-shadow: 0 0.5px 1px #777, 0 2px 6px #f2f2f2;
+  border-width: 1px;
+  border-radius: 10px;
+  background: -webkit-linear-gradient(top, #f9f9f9 0%, #D2D2D2 80%, #c0c0c0 100%);
+  font-family: sans-serif;
+  display: inline-block;
+  transition: box-shadow 0.3s ease, transform 0.15s ease;
+  box-shadow: 0 0 1px #888, 0 1px 0 #fff, 0 6px 0 #C0C0C0, 0 8px 17px rgba(68, 68, 68, 0.4), 2px 1px 4px rgba(68, 68, 68, 0.25), -2px 1px 4px rgba(68, 68, 68, 0.25), 0 9px 16px rgba(68, 68, 68, 0.1);
+}
+
+
+
+/* high tom */
+.w { top: 15%; left: 36%; }
+/* mid tom */
+.a { top: 30%; left: 22%; }
+/* snare */
+.s { top: 32%; right: 30%; }
+/* floor tom */
+.d { bottom: 40.4%; left: 40%; }
+/* crush */
+.j { top: 2%; left: 30%; }
+/* bass drum */
+.k { bottom: 40%; left: 10%; }
+/* hi-hat */
+.l { top: 12%; right: 10%; }
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+
+@media(max-width:960px) {
+  .container {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  footer {
+    font-size: .8rem;
+  }
+
+}
+
+@media (max-width: 699px) {
+
+  .header-content h1 {
+    font-size: 4rem;
+  }
+
+  .set p {
+    font-size: 1.2rem;
+  }
+
+  hr {
+    width: 10rem;
+  }
+
+}
+
+@media (max-width: 597px) {
+  .key__button {
+    line-height: 40px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+}
+
+@media (max-width: 410px) {
+
+  .header-content h1 {
+    font-size: 3rem;
+  }
+
+  .header-content p {
+    font-size: 1rem;
+    padding-bottom: 5rem;
+  }
+  .set p {
+    font-size: 1rem;
+  }
+
+  hr {
+    width: 8rem;
+  }
+}
